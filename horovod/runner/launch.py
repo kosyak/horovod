@@ -553,7 +553,8 @@ def _run_static(args):
                                      output_filename=args.output_filename,
                                      run_func_mode=args.run_func is not None,
                                      nics=args.nics,
-                                     prefix_output_with_timestamp=args.prefix_output_with_timestamp)
+                                     prefix_output_with_timestamp=args.prefix_output_with_timestamp,
+                                     executable=args.executable)
 
     # This cache stores the results of checks performed by horovod
     # during the initialization step. It can be disabled by setting

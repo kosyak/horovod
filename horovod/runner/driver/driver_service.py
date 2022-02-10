@@ -96,7 +96,7 @@ def _launch_task_servers(all_host_names, local_host_names, driver_addresses,
         command = \
             '{python} -m horovod.runner.task_fn {index} {num_hosts} ' \
             '{driver_addresses} {settings}' \
-            .format(python=sys.executable,
+            .format(python=settings.executable or sys.executable,
                     index=codec.dumps_base64(index),
                     num_hosts=codec.dumps_base64(num_hosts),
                     driver_addresses=codec.dumps_base64(driver_addresses),
